@@ -1,0 +1,19 @@
+/*---------------------------------------------------
+HEADING
+----------------------------------------------------*/
+// TEST COMPILATION TO DIST/CSS
+// body {
+//     color: white;
+// }
+
+.person {
+    border: 1px solid green;
+
+    &__navn {
+        border-radius: 5px;
+    }
+}
+
+
+/* SUBHEADING
+------------------------------------*/
