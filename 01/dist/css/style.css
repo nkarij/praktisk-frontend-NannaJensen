@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*---------------------------------------------------
     IMPORTS
 ----------------------------------------------------*/
@@ -23,6 +24,10 @@ html {
 
 /* FA FA ICONS
 ------------------------------------*/
+.fas, .far {
+  color: black;
+}
+
 /* horisontal alignment on parent */
 .icon-parent {
   display: block;
@@ -32,7 +37,7 @@ html {
   text-align: center;
 }
 
-/* vertical alignment on child */
+/* vertical alignment on child - det er noget med at det skal være before/after pseudo.. */
 .icon-align-v {
   display: inline-block;
   vertical-align: middle;
@@ -66,15 +71,24 @@ h1, h2, h3, h4, h5, h6 {
 /*---------------------------------------------------
     TOP-BANNER
 ----------------------------------------------------*/
-.fas, .far {
-  color: black;
+.top-banner {
+  padding: 1%;
 }
 
 .top-menu {
   display: flex;
+  justify-content: flex-end;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.top-menu__listitem {
+  margin: 0.5% 1%;
+}
+
+.top-menu__listitem:first-of-type {
+  margin: 0.5% 4%;
 }
 
 /* SUBHEADING

@@ -34,6 +34,10 @@ html {
 /* FA FA ICONS
 ------------------------------------*/
 
+.fas, .far {
+    color: black;
+}
+
 /* horisontal alignment on parent */
 
 .icon-parent {
@@ -42,7 +46,7 @@ html {
     text-align: center;
 }
 
-/* vertical alignment on child */
+/* vertical alignment on child - det er noget med at det skal være before/after pseudo.. */
 .icon-align-v {
     display: inline-block;
     vertical-align: middle; 

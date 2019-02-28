@@ -26,13 +26,25 @@
     TOP-BANNER
 ----------------------------------------------------*/
 
-.fas, .far {
-    color: black;
+
+
+.top-banner {
+    padding: 1%;
+
 }
 
 .top-menu {
     display: flex;
+    justify-content: flex-end;
     @include list-undecorate();
+}
+
+.top-menu__listitem {
+    margin: .5% 1%;
+}
+
+.top-menu__listitem:first-of-type {
+    margin: .5% 4%;
 }
 
 /* SUBHEADING
