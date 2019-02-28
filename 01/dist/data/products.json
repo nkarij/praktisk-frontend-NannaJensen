@@ -95,7 +95,7 @@
             "image-path" : "/produktbilleder/effektforstaerkere/",
             "price" : "210",
             "category" : 3,
-            "producer" : 2,
+            "producer" : 2
         },
         {
             "id": 13,
@@ -183,7 +183,7 @@
             "image-path" : "/produktbilleder/int_forstaerkere/",
             "price" : "221",
             "category" : 6,
-            "producer" : 1,
+            "producer" : 1
         },
         {
             "id": 24,
