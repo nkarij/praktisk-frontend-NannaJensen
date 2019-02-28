@@ -1,0 +1,37 @@
+{
+    "producers" : [
+        { 
+            "id" : 1,
+            "name" : "manufacturer 1"
+         },
+        { 
+            "id" : 2,
+            "name" : "manufacturer 2"
+        },
+        { 
+            "id" : 3,
+            "name" : "manufacturer 3"
+        },
+        { 
+            "id" : 4,
+            "name" : "manufacturer 4"
+        },
+        { 
+            "id" : 5,
+            "name" : "manufacturer 5"
+        
+        },
+        {   
+            "id" : 6,
+            "name" : "manufacturer 6"
+        },
+        { 
+            "id" : 7,
+            "name" : "manufacturer 7"
+        },
+        { 
+            "id" : 8,
+            "name" : "manufacturer 8"
+        }
+    ]
+}
