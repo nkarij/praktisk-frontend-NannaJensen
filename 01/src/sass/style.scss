@@ -1,19 +1,39 @@
 /*---------------------------------------------------
-HEADING
+    IMPORTS
 ----------------------------------------------------*/
-// TEST COMPILATION TO DIST/CSS
-// body {
-//     color: white;
-// }
 
-.person {
-    border: 1px solid green;
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/fonts';
+@import 'partials/reset';
 
-    &__navn {
-        border-radius: 5px;
-    }
+/*---------------------------------------------------
+    GLOBAL 
+----------------------------------------------------*/
+
+.body {
+    background-color: white;
 }
 
+/*---------------------------------------------------
+    HEADER  
+----------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------
+    TOP-BANNER
+----------------------------------------------------*/
+
+.fas, .far {
+    color: black;
+}
+
+.top-menu {
+    display: flex;
+    @include list-undecorate();
+}
 
 /* SUBHEADING
 ------------------------------------*/

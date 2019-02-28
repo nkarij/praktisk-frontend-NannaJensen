@@ -1,6 +1,4 @@
 
-
-
 /* SHORTCUTS TO FIT WIDTH & HEIGHTS
 --------------------------------------------------*/ 
 
@@ -12,6 +10,15 @@
 @mixin fit-image($objectfit){
     @include fill-parent();
     object-fit: $objectfit();
+}
+
+/* UL-list decoration
+--------------------------------------------------*/
+
+@mixin list-undecorate(){
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 

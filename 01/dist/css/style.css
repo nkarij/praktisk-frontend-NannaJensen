@@ -1,1 +1,83 @@
-.person{border:1px solid green}.person__navn{border-radius:5px}/*# sourceMappingURL=style.css.map */
+/*---------------------------------------------------
+    IMPORTS
+----------------------------------------------------*/
+/* SHORTCUTS TO FIT WIDTH & HEIGHTS
+--------------------------------------------------*/
+/* UL-list decoration
+--------------------------------------------------*/
+/* DEVICE SPECIFIC STYLES
+--------------------------------------------------*/
+/* HTML REFERENCE FONT
+------------------------------------*/
+html {
+  font-size: 2vw;
+  /* all other referring fonts in rem */
+}
+
+/* LINKS
+------------------------------------*/
+.no-deco {
+  text-decoration: none;
+  color: black;
+}
+
+/* FA FA ICONS
+------------------------------------*/
+/* horisontal alignment on parent */
+.icon-parent {
+  display: block;
+  /*needs to be a block/inline-block element */
+  line-height: 2rem;
+  /*needs to be same line-height as height */
+  text-align: center;
+}
+
+/* vertical alignment on child */
+.icon-align-v {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/*---------------------------------------------------
+    GLOBAL 
+----------------------------------------------------*/
+.body {
+  background-color: white;
+}
+
+/*---------------------------------------------------
+    HEADER  
+----------------------------------------------------*/
+/*---------------------------------------------------
+    TOP-BANNER
+----------------------------------------------------*/
+.fas, .far {
+  color: black;
+}
+
+.top-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* SUBHEADING
+------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */
