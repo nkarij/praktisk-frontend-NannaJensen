@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         return response.json();
     })
     .then((data)=>{
-        console.log(data);
+        // console.log(data);
         let dataFromFetch = data;
 
         for (i = 0; i < dataFromFetch.length; i++) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         function createMenu(textNode){
             let listItemElement = document.createElement("li");
-            let linkElement = document.querySelector("a");
+            let linkElement = document.createElement("a");
             linkElement.innerHTML = textNode;
             listItemElement.appendChild(linkElement);
             categoryMenuListElement.appendChild(listItemElement);
