@@ -45,7 +45,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         function createMenu(textNode){
             let listItemElement = document.createElement("li");
+            listItemElement.classList.add("producer-menu__item");
             let linkElement = document.createElement("a");
+            linkElement.classList.add("producer-menu__link");
             linkElement.innerHTML = textNode;
             listItemElement.appendChild(linkElement);
             producerMenuListElement.appendChild(listItemElement);

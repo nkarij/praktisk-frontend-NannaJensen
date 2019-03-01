@@ -299,7 +299,7 @@ ul {
 }
 
 /*---------------------------------------------------
-    SHOP category site
+    SHOP CATEGORY SITE
 ----------------------------------------------------*/
 .category-page-wrapper {
   padding: 2% 2%;
@@ -358,5 +358,14 @@ ul {
   height: 100%;
   object-fit: cover;
 }
+
+/*    CATEGORY MENU
+---------------------------------------*/
+.category-menu__link:hover {
+  background-color: bisque;
+}
+
+/*    PRODUCER MENU
+---------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

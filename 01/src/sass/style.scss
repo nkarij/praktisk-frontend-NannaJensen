@@ -242,7 +242,7 @@
 }
 
 /*---------------------------------------------------
-    SHOP category site
+    SHOP CATEGORY SITE
 ----------------------------------------------------*/
 
 .category-page-wrapper {
@@ -313,3 +313,23 @@
     @include fit-image(cover);
 }
 
+
+/*    CATEGORY MENU
+---------------------------------------*/
+
+// dynamisk
+// .category-menu__item {
+
+// }
+
+// dynamisk
+.category-menu__link:hover {
+    background-color: bisque;
+}
+
+/*    PRODUCER MENU
+---------------------------------------*/
+
+// .producer-menu__link
+
+// .producer-menu__link

@@ -31,9 +31,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
            createMenu(categoryNames);
         }
 
+        
+
         function createMenu(textNode){
             let listItemElement = document.createElement("li");
+            listItemElement.classList.add("category-menu__item");
             let linkElement = document.createElement("a");
+            linkElement.classList.add("category-menu__link");
             linkElement.innerHTML = textNode;
             listItemElement.appendChild(linkElement);
             categoryMenuListElement.appendChild(listItemElement);
