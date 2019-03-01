@@ -1,37 +1,35 @@
-{
-    "categories" : [
-        { 
-            "id" : 1,
-            "name" : "CD afspillere"
-         },
-        { 
-            "id" : 2,
-            "name" : "DVD afspillere"
+[
+    { 
+        "id" : 1,
+        "name" : "CD afspillere"
         },
-        { 
-            "id" : 3,
-            "name" : "Forforstærkere"
-        },
-        { 
-            "id" : 4,
-            "name" : "Effekt forstærkere"
-        },
-        { 
-            "id" : 5,
-            "name" : "Højtalere"
-        },
-        { 
-            "id" : 6,
-            "name" : "Integreret forstærkere"
-        
-        },
-        {   
-            "id" : 7,
-            "name" : "Pladespillere"
-        },
-        { 
-            "id" : 8,
-            "name" : "Rørforstærkere"
-        }
-    ]
-}
+    { 
+        "id" : 2,
+        "name" : "DVD afspillere"
+    },
+    { 
+        "id" : 3,
+        "name" : "Forforstærkere"
+    },
+    { 
+        "id" : 4,
+        "name" : "Effekt forstærkere"
+    },
+    { 
+        "id" : 5,
+        "name" : "Højtalere"
+    },
+    { 
+        "id" : 6,
+        "name" : "Integreret forstærkere"
+    
+    },
+    {   
+        "id" : 7,
+        "name" : "Pladespillere"
+    },
+    { 
+        "id" : 8,
+        "name" : "Rørforstærkere"
+    }
+]
