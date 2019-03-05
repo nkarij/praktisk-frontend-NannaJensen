@@ -26,7 +26,6 @@ fetch("data/products.json")
 
         let productsData = productsdata;  
         let galleryListElement = document.querySelector(".all-products-gallery");
-        let listItemClassName = ".noget"
 
         function generateListItem(productId, klasse){
             let element = document.createElement('li');
@@ -53,9 +52,10 @@ fetch("data/products.json")
             return element;
         }
         
+        // her indsættes de konkrete tags mv.
         for (let i = 0; i < productsData.length; i++){
             let Id = productsData[i].id;
-            let listItemelement = generateListItem(Id, listItemClassName);
+            let listItemelement = generateListItem(Id, ".noget");
             let linkElement = generateLinkElement(i, "a", ".link");
             listItemelement.appendChild(linkElement);
             linkElement.appendChild(generateImage(i, "img", ".test"));
