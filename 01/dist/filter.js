@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data1.forEach(item => {
                         if(item.category == object.id) {
                             newArray.push(item);
+                            // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
                         }
                     });
                 }
