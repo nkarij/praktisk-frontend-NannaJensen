@@ -48,16 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("proceed");
             // her må jeg kalde mine hjælpefunktioner mm...
             categoryMenuList.addEventListener('click', filterByCategory);
-            
         }
     }
 
     function filterByCategory(){
         // console.log(event);
         let newArray  = [];
-        if(event.target.className = "category-menu__link") {
-            console.log(event.target.className);
-            console.log(event.target.innerHTML);
+            // console.log(event.target.innerHTML);
             data2.forEach((object) => {
                 if(object.name == event.target.innerHTML) {
                     // loop data1.category
@@ -70,6 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             console.log(newArray);
         }
-    }
+    // }
 
 });
