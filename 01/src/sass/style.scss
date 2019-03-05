@@ -314,22 +314,40 @@
 }
 
 
-/*    CATEGORY MENU
+/*    CATEGORY & PRODUCER MENU
 ---------------------------------------*/
 
 // dynamisk
-// .category-menu__item {
+.category-menu__item, .producer-menu__item {
+    width: 100%;
 
-// }
+}
 
 // dynamisk
-.category-menu__link:hover {
+.category-menu__link, .producer-menu__link {
+    display: block;
+    color: red;
+    width: 100%;
+}
+
+.category-menu__link:hover, .producer-menu__link:hover {
     background-color: bisque;
 }
 
 /*    PRODUCER MENU
 ---------------------------------------*/
 
-// .producer-menu__link
+// .producer-menu__item {
+// }
+
 
 // .producer-menu__link
+
+
+.test {
+    color: red;
+}
+
+.noget {
+    color: blue;
+}

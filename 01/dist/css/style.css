@@ -359,13 +359,26 @@ ul {
   object-fit: cover;
 }
 
-/*    CATEGORY MENU
+/*    CATEGORY & PRODUCER MENU
 ---------------------------------------*/
-.category-menu__link:hover {
+.category-menu__item, .producer-menu__item {
+  width: 100%;
+}
+
+.category-menu__link, .producer-menu__link {
+  display: block;
+  color: red;
+  width: 100%;
+}
+
+.category-menu__link:hover, .producer-menu__link:hover {
   background-color: bisque;
 }
 
 /*    PRODUCER MENU
 ---------------------------------------*/
+.test {
+  color: red;
+}
 
 /*# sourceMappingURL=style.css.map */

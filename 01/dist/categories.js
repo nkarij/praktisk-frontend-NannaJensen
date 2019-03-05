@@ -42,7 +42,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             listItemElement.appendChild(linkElement);
             categoryMenuListElement.appendChild(listItemElement);
         }
+
+        // LAV ET FILTER, SOM KUN VISER DE FOTOS SOM HØRER TIL CATEGORIES
         
     });
+
+
 
 })
