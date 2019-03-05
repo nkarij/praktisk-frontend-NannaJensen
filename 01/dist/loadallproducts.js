@@ -31,7 +31,7 @@ fetch("data/products.json")
             let element = document.createElement('li');
             element.id = productId;
             element.classList.add(klasse);
-            console.log(element);
+            // console.log(element);
             return element;
         }
 
