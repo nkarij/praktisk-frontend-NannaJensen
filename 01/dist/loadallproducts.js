@@ -1,57 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
  
-    // fetch("data/products.json")
-    // // mellem-then() skal altid skrives på denne/samme måde
-    // .then((response)=>{
-    //     // console.log(response);
-    //     return response.json();
-    // })
-    // .then((data2)=>{
-    //     // console.log(data);
-
-    //     let unorderedList = document.querySelector(".all-products-gallery");
-    //     let dataLoaded = data2;
-
-    //     for (i = 0; i < dataLoaded.length; i++) {
-
-    //         function createElementWithContent(tags, klasser, parentElement){
-    //             let createdElement = document.createElement(tags);
-    //             createdElement.classList.add(klasser);
-    //             parentElement.appendChild(createdElement);
-    //             // console.log(createdElement);
-    //             return createdElement;
-    //         }
-       
-    //         function createListItemWithContent(tag, klasse, id){
-    //             let createdElement = document.createElement(tag);
-    //             createdElement.classList.add(klasse);
-    //             createdElement.setAttribute("id", id);
-    //             unorderedList.appendChild(createdElement);
-    //             // console.log(createdElement);
-    //             return createdElement;
-    //         }
-
-    //         let listElement = createListItemWithContent("li", "all-products__listitem", dataLoaded[i].id);
-            
-    //         let linkElement = createElementWithContent("a", "test", listElement);
-    //         let imageElement = createElementWithContent("img", "test", linkElement);
-    //         let headingElement = createElementWithContent("h4", "test", listElement);
-    //         let paragraphElement = createElementWithContent("p", "test", listElement);
-    //         let spanElement = createElementWithContent("span", "test", paragraphElement);
-
-    //         let listItemArray = document.querySelectorAll(".all-products__listitem");
-    //         console.log(listItemArray);
-
-    //         // listItemArray.forEach(listitem => {
-    //         //     if(listitem.id === dataLoaded[i].id) {
-    //         //         console.log("super");
-    //         //     }      
-    //         // });
-
-    //     }
-
-
-    
+   
     // LOAD ALLE PRODUKTER TIL SIDEN
     // gem gallery-listen: .all-products-gallery
     // fetch data fra JSON.
@@ -66,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // med span = kr
 
 // PSEUDO-KODE
-
 
 fetch("data/products.json")
     // mellem-then() skal altid skrives på denne/samme måde
@@ -84,31 +32,35 @@ fetch("data/products.json")
             let element = document.createElement('li');
             element.id = productId;
             element.classList.add(klasse);
-        }
-        
-        // måske skal dette (i) fjernes?
-        function generateImage(i){
-            let element = document.createElement('a');
-            element.classList.add("test");
-            element.setAttribute('href', productsData[i].image_path);
-            return element
-        }
-        
-        for (let i = 0; i< productsData.length; i++){
-            let Id = productsData[i].id;
-            galleryListElement.appendChild(generateListItem(Id, ".noget"));
-        }
-        
-        
-        // måske skal der tilføjes index i foreach-løkken?
-        function appendImageToListItem(klasse) {
-            let array = document.querySelectorAll(klasse);
-            array.forEach(element => {
-                element.appendChild(generateImage());       
-            });
+            console.log(element);
+            return element;
         }
 
-        appendImageToListItem(listItemClassName);
+        function generateLinkElement(i, tags, klasse) {
+            let element = document.createElement(tags);
+            element.classList.add(klasse);
+            element.setAttribute('href', productsData[i].image_path);
+            // console.log(productsData[i]);
+            return element;
+        }
+        
+
+        function generateImage(i, tags, klasse) {
+            let element = document.createElement(tags);
+            element.classList.add(klasse);
+            element.setAttribute('src', productsData[i].image_path);
+            // console.log(productsData[i]);
+            return element;
+        }
+        
+        for (let i = 0; i < productsData.length; i++){
+            let Id = productsData[i].id;
+            let listItemelement = generateListItem(Id, listItemClassName);
+            let linkElement = generateLinkElement(i, "a", ".link");
+            listItemelement.appendChild(linkElement);
+            linkElement.appendChild(generateImage(i, "img", ".test"));
+            galleryListElement.appendChild(listItemelement);
+        }
 
     });
 

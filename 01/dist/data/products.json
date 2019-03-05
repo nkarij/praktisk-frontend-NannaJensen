@@ -3,7 +3,7 @@
     {
         "id": 1,
         "name" : "Creek Classic",
-        "image_path" : "/produktbilleder/cd_afspillere/creek_classic_cd.jpg",
+        "image_path" : "Produktbilleder/cd_afspillere/creek_classic_cd.jpg",
         "price" : "200",
         "category" : 1,
         "producer" : 1
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name" : "Creek Destiny",
-        "image_path" : "/produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
+        "image_path" : "Produktbilleder/cd_afspillere/creek_Destiny_CD.jpg",
         "price" : "201",
         "category" : 1,
         "producer" : 1
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "name" : "Creek Evolution",
-        "image_path" : "/produktbilleder/cd_afspillere/creek_evo_cd.jpg",
+        "image_path" : "Produktbilleder/cd_afspillere/creek_evo_cd.jpg",
         "price" : "202",
         "category" : 1,
         "producer" : 1
@@ -28,7 +28,7 @@
     {
         "id": 4,
         "name" : "Creek Expo",
-        "image_path" : "/produktbilleder/cd_afspillere/Exp_2010S_CD.gif",
+        "image_path" : "Produktbilleder/cd_afspillere/Exp_2010S_CD.gif",
         "price" : "203",
         "category" : 1,
         "producer" : 1
@@ -36,7 +36,7 @@
     {
         "id": 5,
         "name" : "Creek Classic",
-        "image_path" : "/produktbilleder/dvdafspillere/creek_classic.jpg",
+        "image_path" : "Produktbilleder/dvdafspillere/creek_classic.jpg",
         "price" : "204",
         "category" : 2,
         "producer" : 1
@@ -44,7 +44,7 @@
     {
         "id": 6,
         "name" : "Creek Exposure",
-        "image_path" : "/produktbilleder/dvdafspillere/exposure_2010S.jpg",
+        "image_path" : "Produktbilleder/dvdafspillere/exposure_2010S.jpg",
         "price" : "205",
         "category" : 2,
         "producer" : 1
@@ -52,7 +52,7 @@
     {
         "id": 7,
         "name" : "Parasound 200",
-        "image_path" : "/produktbilleder/dvdafspillere/parasound_d200.jpg",
+        "image_path" : "Produktbilleder/dvdafspillere/parasound_d200.jpg",
         "price" : "206",
         "category" : 2,
         "producer" : 2
@@ -60,7 +60,7 @@
     {
         "id": 8,
         "name" : "Parasound Halo d3",
-        "image_path" : "/produktbilleder/dvdafspillere/parasound_halod3.jpg",
+        "image_path" : "Produktbilleder/dvdafspillere/parasound_halod3.jpg",
         "price" : "207",
         "category" : 2,
         "producer" : 2
@@ -68,7 +68,7 @@
     {
         "id": 9,
         "name" : "Manley Mahi",
-        "image_path" : "/produktbilleder/effektforstaerkere/manley_mahi.jpg",
+        "image_path" : "Produktbilleder/effektforstaerkere/manley_mahi.jpg",
         "price" : "208",
         "category" : 3,
         "producer" : 3
@@ -76,7 +76,7 @@
     {
         "id": 10,
         "name" : "Manley Neoclassic",
-        "image_path" : "/produktbilleder/effektforstaerkere/manley_neoclassic300b.jpg",
+        "image_path" : "Produktbilleder/effektforstaerkere/manley_neoclassic300b.jpg",
         "price" : "208",
         "category" : 3,
         "producer" : 3
@@ -84,7 +84,7 @@
     {
         "id": 11,
         "name" : "Manley Snapper",
-        "image_path" : "/produktbilleder/effektforstaerkere/manley_snapper.jpg",
+        "image_path" : "Produktbilleder/effektforstaerkere/manley_snapper.jpg",
         "price" : "209",
         "category" : 3,
         "producer" : 3
@@ -92,7 +92,7 @@
     {
         "id": 12,
         "name" : "Parasound Halo A23",
-        "image_path" : "/produktbilleder/effektforstaerkere/parasound_haloa23.jgp",
+        "image_path" : "Produktbilleder/effektforstaerkere/parasound_haloa23.jpg",
         "price" : "210",
         "category" : 3,
         "producer" : 2
@@ -100,7 +100,7 @@
     {
         "id": 13,
         "name" : "Creek OBH Passive",
-        "image_path" : "/produktbilleder/forforstaerkere/Creek_OBH_22_Passive_Preamp.jpg",
+        "image_path" : "Produktbilleder/forforstaerkere/Creek_OBH_22_Passive_Preamp.jpg",
         "price" : "211",
         "category" : 4,
         "producer" : 1
@@ -108,7 +108,7 @@
     {
         "id": 14,
         "name" : "Parasound classic 7100",
-        "image_path" : "/produktbilleder/forforstaerkere/parasound_classic7100.jpg",
+        "image_path" : "Produktbilleder/forforstaerkere/parasound_classic7100.jpg",
         "price" : "212",
         "category" : 4,
         "producer" : 2
@@ -116,7 +116,7 @@
     {
         "id": 15,
         "name" : "Parasound Halo p3",
-        "image_path" : "/produktbilleder/forforstaerkere/parasound_halop3.jpg",
+        "image_path" : "Produktbilleder/forforstaerkere/parasound_halop3.jpg",
         "price" : "213",
         "category" : 4,
         "producer" : 2
@@ -124,7 +124,7 @@
     {
         "id": 16,
         "name" : "Project Prebox",
-        "image_path" : "/produktbilleder/forforstaerkere/Project_prebox.jpg",
+        "image_path" : "Produktbilleder/forforstaerkere/Project_prebox.jpg",
         "price" : "214",
         "category" : 4,
         "producer" : 4
@@ -132,7 +132,7 @@
     {
         "id": 17,
         "name" : "Boesendorfer Wall",
-        "image_path" : "/produktbilleder/hojtalere/boesendorfer_vcs_wall.gif",
+        "image_path" : "Produktbilleder/hojtalere/boesendorfer_vcs_wall.gif",
         "price" : "215",
         "category" : 5,
         "producer" : 5
@@ -140,7 +140,7 @@
     {
         "id": 18,
         "name" : "Epos M5",
-        "image_path" : "/produktbilleder/hojtalere/epos_m5.gif",
+        "image_path" : "Produktbilleder/hojtalere/epos_m5.gif",
         "price" : "216",
         "category" : 5,
         "producer" : 6
@@ -148,7 +148,7 @@
     {
         "id": 19,
         "name" : "Harbeth hl7",
-        "image_path" : "/produktbilleder/hojtalere/harbeth_hl7es2.jpg",
+        "image_path" : "Produktbilleder/hojtalere/harbeth_hl7es2.jpg",
         "price" : "217",
         "category" : 5,
         "producer" : 7
@@ -156,7 +156,7 @@
     {
         "id": 20,
         "name" : "Harbeth Monitor",
-        "image_path" : "/produktbilleder/hojtalere/harbeth_monitor30.jpg",
+        "image_path" : "Produktbilleder/hojtalere/harbeth_monitor30.jpg",
         "price" : "218",
         "category" : 5,
         "producer" : 7
@@ -164,7 +164,7 @@
     {
         "id": 21,
         "name" : "Harbeth P3",
-        "image_path" : "/produktbilleder/hojtalere/harbeth_p3es2.jpg",
+        "image_path" : "Produktbilleder/hojtalere/harbeth_p3es2.jpg",
         "price" : "219",
         "category" : 5,
         "producer" : 7
@@ -172,7 +172,7 @@
     {
         "id": 22,
         "name" : "Creek a50I",
-        "image_path" : "/produktbilleder/int_forstaerkere/creek_a50I.jpg",
+        "image_path" : "Produktbilleder/int_forstaerkere/creek_a50I.jpg",
         "price" : "220",
         "category" : 6,
         "producer" : 1
@@ -180,7 +180,7 @@
     {
         "id": 23,
         "name" : "Creek Classic 5350",
-        "image_path" : "/produktbilleder/int_forstaerkere/creek_classic5350SE.jpg",
+        "image_path" : "Produktbilleder/int_forstaerkere/creek_classic5350SE.jpg",
         "price" : "221",
         "category" : 6,
         "producer" : 1
@@ -188,7 +188,7 @@
     {
         "id": 24,
         "name" : "Creek Destiny Amp",
-        "image_path" : "/produktbilleder/int_forstaerkere/creek_destinyamp.jpg",
+        "image_path" : "Produktbilleder/int_forstaerkere/creek_destinyamp.jpg",
         "price" : "222",
         "category" : 6,
         "producer" : 1
@@ -196,7 +196,7 @@
     {
         "id": 25,
         "name" : "Manley Snapper Amp",
-        "image_path" : "/produktbilleder/int_forstaerkere/manley_snapper.jpg",
+        "image_path" : "Produktbilleder/int_forstaerkere/manley_snapper.jpg",
         "price" : "223",
         "category" : 6,
         "producer" : 3
@@ -204,7 +204,7 @@
     {
         "id": 26,
         "name" : "Manley Stingray Amp",
-        "image_path" : "/produktbilleder/int_forstaerkere/Manley_Stingray.jpg",
+        "image_path" : "Produktbilleder/int_forstaerkere/Manley_Stingray.jpg",
         "price" : "224",
         "category" : 6,
         "producer" : 3
@@ -212,7 +212,7 @@
     {
         "id": 27,
         "name" : "Project Debut 3 blue",
-        "image_path" : "/produktbilleder/pladespillere/Pro_ject_Debut_3_bl.jpg",
+        "image_path" : "Produktbilleder/pladespillere/Pro_ject_Debut_3_bl.jpg",
         "price" : "225",
         "category" : 7,
         "producer" : 4
@@ -220,7 +220,7 @@
     { 
         "id": 28,
         "name" : "Project Debut 3 red",
-        "image_path" : "/produktbilleder/pladespillere/Pro_ject_Debut_III_red_1.jpg",
+        "image_path" : "Produktbilleder/pladespillere/Pro_ject_Debut_III_red_1.jpg",
         "price" : "226",
         "category" : 7,
         "producer" : 4
@@ -228,7 +228,7 @@
     {
         "id": 29,
         "name" : "Project Debut 3 yellow",
-        "image_path" : "/produktbilleder/pladespillere/Pro_ject_Debut_III_yellow_1.jpg",
+        "image_path" : "Produktbilleder/pladespillere/Pro_ject_Debut_III_yellow_1.jpg",
         "price" : "227",
         "category" : 7,
         "producer" : 4
@@ -236,7 +236,7 @@
     {
         "id": 30,
         "name" : "Project RPM 5",
-        "image_path" : "/produktbilleder/pladespillere/Pro_ject_rpm_5.jpg",
+        "image_path" : "Produktbilleder/pladespillere/Pro_ject_rpm_5.jpg",
         "price" : "228",
         "category" : 7,
         "producer" : 4
@@ -244,7 +244,7 @@
     {
         "id": 31,
         "name" : "Project RPM 10",
-        "image_path" : "/produktbilleder/pladespillere/Pro_ject_rpm10.jpg",
+        "image_path" : "Produktbilleder/pladespillere/Pro_ject_rpm10.jpg",
         "price" : "229",
         "category" : 7,
         "producer" : 4
@@ -252,7 +252,7 @@
     {
         "id": 32,
         "name" : "Jolida JD102",
-        "image_path" : "/produktbilleder/roer_forstaerkere/jolida_JD102b.jpg",
+        "image_path" : "Produktbilleder/roer_forstaerkere/jolida_JD102b.jpg",
         "price" : "230",
         "category" : 8,
         "producer" : 8
@@ -260,7 +260,7 @@
     {
         "id": 33,
         "name" : "Jolida JD202",
-        "image_path" : "/produktbilleder/roer_forstaerkere/jolida_JD202a.jpg",
+        "image_path" : "Produktbilleder/roer_forstaerkere/jolida_JD202a.jpg",
         "price" : "231",
         "category" : 8,
         "producer" : 8
@@ -268,7 +268,7 @@
     {
         "id": 34,
         "name" : "Jolida JD300",
-        "image_path" : "/produktbilleder/roer_forstaerkere/jolida_JD300b.jpg",
+        "image_path" : "Produktbilleder/roer_forstaerkere/jolida_JD300b.jpg",
         "price" : "232",
         "category" : 8,
         "producer" : 8
@@ -276,7 +276,7 @@
     {
         "id": 35,
         "name" : "Jolida JD302",
-        "image_path" : "/produktbilleder/roer_forstaerkere/jolida_JD302b.jpg",
+        "image_path" : "Produktbilleder/roer_forstaerkere/jolida_JD302b.jpg",
         "price" : "233",
         "category" : 8,
         "producer" : 8
@@ -284,7 +284,7 @@
     {
         "id": 36,
         "name" : "Jolida JD502",
-        "image_path" : "/produktbilleder/roer_forstaerkere/jolida_JD502b.jpg",
+        "image_path" : "Produktbilleder/roer_forstaerkere/jolida_JD502b.jpg",
         "price" : "234",
         "category" : 8,
         "producer" : 8
