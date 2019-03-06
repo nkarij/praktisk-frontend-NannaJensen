@@ -53,14 +53,14 @@ fetch("data/products.json")
         }
         
         // her indsættes de konkrete tags mv. {
-            for (let i = 0; i < productsData.length; i++){
-                let Id = productsData[i].id;
-                let listItemelement = generateListItem(Id, "noget");
-                let linkElement = generateLinkElement(i, "a", "link");
-                listItemelement.appendChild(linkElement);
-                linkElement.appendChild(generateImage(i, "img", "test"));
-                galleryListElement.appendChild(listItemelement);
-            }
+            // for (let i = 0; i < productsData.length; i++){
+            //     let Id = productsData[i].id;
+            //     let listItemelement = generateListItem(Id, "noget");
+            //     let linkElement = generateLinkElement(i, "a", "link");
+            //     listItemelement.appendChild(linkElement);
+            //     linkElement.appendChild(generateImage(i, "img", "test"));
+            //     galleryListElement.appendChild(listItemelement);
+            // }
 
     });
 

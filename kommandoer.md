@@ -17,3 +17,8 @@ sass --watch src/sass:dist/css
 Hvis man også vil minify sin css kode, tilføj --style=compressed:
 
 sass --watch src/sass:dist/css --style=compressed
+
+UL 
+>li 
+    > a 
+    > img.src

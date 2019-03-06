@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // her skrives globale variabler
     let finishedFetching = 0;
     let timerCounts = 0;
-    let data1;
-    let data2;
-    let newData1Array  = [];
+    let allProducts;
+    let categories;
+    let filteredProducts  = [];
+    const allProductsGalleryElement = document.querySelector(".all-products-gallery");
 
     // her henter jeg mine fetches.
     fetch("data/products.json")
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
     })
     .then((data)=>{
-        data1 = data;
+        allProducts = data;
         // console.log(data1);
         fetchIsDone();
     });
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
     })
     .then((data)=>{
-        data2 = data;
+        categories = data;
         // console.log(data2);
         fetchIsDone();
     });
@@ -48,33 +49,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (finishedFetching == timerCounts) {
             console.log("proceed");
             // her må jeg kalde mine hjælpefunktioner mm...
-            categoryMenuList.addEventListener('click', filterByCategory);
+            // når categoryName er tomt = må den loope alle producter [dette er min egen regel]
+            // filterByCategory(""); 
+
+            categoryMenuList.addEventListener('click', function(){
+                filterByCategory(event.target.innerHTML);
+            });
         }
     }
 
-    function filterByCategory(){
+    function filterByCategory(categoryName){
         console.log("kører filterByCategory");
         // console.log(event);
             // console.log(event.target.innerHTML);
-            newData1Array = [];
-        data2.forEach((object) => {
-            if(object.name == event.target.innerHTML) {
-                console.log("har fundet kategori" + object.name);
+        filteredProducts = [];
+
+        // genererer nyt array, filtrerer produkterne 
+        categories.forEach((category) => {
+            if(categoryName == "" || category.name == categoryName) {
+                console.log("har fundet kategori" + category.name);
                 // loop data1.category
-                data1.forEach(item => {
+                allProducts.forEach(item => {
                     // console.log(item);
-                    if(item.category == object.id) {
+                    if(categoryName == "" || item.category == category.id) {
                         // console.log(item);
-                        newData1Array.push(item);
+                        filteredProducts.push(item);
                         // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
                         
                     }
                 });
             }
         });
-        appendImage();
-        // console.log(newData1Array);
+
+        // rydder galleriet for elementer/andet
+        allProductsGalleryElement.innerHTML = "";
+
+        // generer html-elementer vha det nye array (filtered products)
+        filteredProducts.forEach(product => {
+            // console.log(product);
+            let listItemElement = document.createElement("li");
+            // element.classList.add("link");
+            let linkElement = document.createElement("a");
+            // linkElement.setAttribute('href', product.image_path);
+                     // element.classList.add("link");
+            let imageElement = document.createElement("img");
+
+            linkElement.appendChild(imageElement);
+
+            listItemElement.appendChild(linkElement);
+
+            allProductsGalleryElement.appendChild(listItemElement);
+
+            imageElement.src = product.image_path;
+
+        });
+
+        // appendImage();
+        // console.log(filteredProducts);
     }
+
+
 
     function appendImage() {
         // find links-klasse i loadall-products.js
@@ -99,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function createNewImage(tags, klasse){
-        newData1Array.forEach(object => {
+        filteredProducts.forEach(object => {
             // generate new image
             let element = document.createElement(tags);
             element.classList.add(klasse);

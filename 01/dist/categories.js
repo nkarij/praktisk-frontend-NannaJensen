@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         for (i = 0; i < dataFromFetch.length; i++) {
            let categoryNames = dataFromFetch[i].name;
-           createMenu(categoryNames);
+        //    createMenu(categoryNames);
         }
 
         
