@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerCounts = 0;
     let data1;
     let data2;
+    let newData1Array  = [];
 
     // her henter jeg mine fetches.
     fetch("data/products.json")
@@ -52,22 +53,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterByCategory(){
+        console.log("kører filterByCategory");
         // console.log(event);
-        let newArray  = [];
             // console.log(event.target.innerHTML);
-            data2.forEach((object) => {
-                if(object.name == event.target.innerHTML) {
-                    // loop data1.category
-                    data1.forEach(item => {
-                        if(item.category == object.id) {
-                            newArray.push(item);
-                            // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
-                        }
-                    });
-                }
-            });
-            console.log(newArray);
-        }
-    // }
+            newData1Array = [];
+        data2.forEach((object) => {
+            if(object.name == event.target.innerHTML) {
+                console.log("har fundet kategori" + object.name);
+                // loop data1.category
+                data1.forEach(item => {
+                    // console.log(item);
+                    if(item.category == object.id) {
+                        // console.log(item);
+                        newData1Array.push(item);
+                        // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
+                        
+                    }
+                });
+            }
+        });
+        appendImage();
+        // console.log(newData1Array);
+    }
+
+    function appendImage() {
+        // find links-klasse i loadall-products.js
+        let productLinksArray = document.querySelectorAll(".link");
+        // console.log(productLinksArray);
+        productLinksArray.forEach(link => {
+            link.innerHTML = "";
+            // console.log(link);
+            appendChild(link);
+            
+            function appendChild(productlinkElement) {
+            
+                // for (let i = 0; i < newData1Array.length; i++){
+                //     console.log(i);
+                    //productLinkElement.appendChild(createNewImage("img", ".newclass"));
+                    console.log(productlinkElement);
+                // }
+            }
+
+        }); 
+    }
+
+
+    function createNewImage(tags, klasse){
+        newData1Array.forEach(object => {
+            // generate new image
+            let element = document.createElement(tags);
+            element.classList.add(klasse);
+            element.setAttribute('src', object.image_path);
+            return element;
+        });
+    }
 
 });
