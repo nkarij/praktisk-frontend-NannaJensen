@@ -27,18 +27,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let dataFromFetch = data;
 
         for (i = 0; i < dataFromFetch.length; i++) {
-           let categoryNames = dataFromFetch[i].name;
-        //    createMenu(categoryNames);
+           let categoryName = dataFromFetch[i].name;
+           createMenu(categoryName, dataFromFetch[i].id);
         }
 
         
 
-        function createMenu(textNode){
+        function createMenu(textNode, categoryid){
             let listItemElement = document.createElement("li");
             listItemElement.classList.add("category-menu__item");
             let linkElement = document.createElement("a");
             linkElement.classList.add("category-menu__link");
             linkElement.innerHTML = textNode;
+            linkElement.dataset.categoryid = categoryid;
             listItemElement.appendChild(linkElement);
             categoryMenuListElement.appendChild(listItemElement);
         }
