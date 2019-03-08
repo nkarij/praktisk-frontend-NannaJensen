@@ -59,7 +59,7 @@
         </nav>
     </header>
 
-    <div class="X-page-wrapper">  
+    <div class="single-page-wrapper">  
 
         <!-- BREADCRUMB MENU -->
         <ul class="breadcrumb">
@@ -75,7 +75,10 @@
         <div class="single-pagegrid">
 
         <!-- WEBSHOP BANNER -->
-        <img src="page-photos/single-page-products/WEBSHOP_BANNER.png" alt="" class="single-shop-banner">
+        <div class="single-shop-banner">
+            <img src="page-photos/single-page-products/WEBSHOP_BANNER.png" alt="" class="single-shop-banner__image">
+        </div>
+
 
         <!-- MAIN -->
             <main class="single-main">
@@ -84,22 +87,27 @@
 
                     <!-- GRID COLUMN 1 -->
                     <!-- product image section -->
-                    <div class="single-image">
+                    <div class="single-image-box">
                         <div class="single-image__zoom">
                             <div class="single-image__gallery">
-                                <img src="page-photos/single-page-products/product-front.png" alt="" class="single-image-src">
+                                <img src="page-photos/single-page-products/product-front.png" alt="" class="single-image__src">
                             </div>
                         </div>
                     </div>
                     <!-- thumbnail section -->
                     <div class="single-more-views">
+                        <h4 class="single-more-views__heading">MORE VIEWS</h4>
                         <ul class="single-thumbnails">
-                            <li class="single-thumbnails__item">
-                                <a href="" class="single-thumbnails__link"></a>
+                            <!-- <li class="single-thumbnails__item">
+                                <a href="" class="single-thumbnails__link">
+                                    <img src="page-photos/single-page-products/product-black.png" alt="" class="single-thumbnail__image">
+                                </a>
                             </li>
                             <li class="single-thumbnails__item">
-                                <a href="" class="single-thumbnails__link"></a>
-                            </li>
+                                <a href="" class="single-thumbnails__link">
+                                    <img src="page-photos/single-page-products/product-back.png" alt="" class="single-thumbnail__image">
+                                </a>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -156,18 +164,18 @@
                         <section class="single-shop">
                             <h4 class="single-shop__heading"></h4>
                             <div class="single-shop-sublines">
-                                <a href="" class="single-shop-view-more-products"></a>
+                                <a href="" class="single-shop-view-more-products">VIEW MORE PRODUCTS</a>
                                 <span class="single-shop-price"> <span class="single-shop-valuta">$</span> X </span>
                             </div>
-                            <p class="single-shop-textbox">
+                            <p class="single-shop-textbox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eligendi enim cumque non dicta, in laudantium, molestiae eos vero provident veniam deserunt amet. Dolorum sunt fugiat laboriosam laborum quia reiciendis.
                             </p>
                         </section>
                         <!-- button section -->
                         <div class="single-shop-interact">
-                            <button class="single-shop-cta-button"></button>
-                            <button class="single-shop-cta-button"></button>
-                            <button class="single-shop-cta-button"></button>
-                            <button class="single-shop-cta-button"></button>
+                            <button class="single-shop-cta-button">TEXT</button>
+                            <button class="single-shop-cta-button">TEXT</button>
+                            <button class="single-shop-cta-button">TEXT</button>
+                            <button class="single-shop-cta-button">TEXT</button>
                         </div>
                     </div>
                     <!-- add to cart section -->
@@ -277,9 +285,9 @@
 
         </section>
 
-
     </footer>
-
+    <!-- <script src="image-flip.js"></script> -->
+    <script src="single-product-details.js"></script>
     <!-- <script src="categories.js"></script>
     <script src="producers.js"></script> -->
     <!-- <script src="loadallproducts.js"></script> -->
