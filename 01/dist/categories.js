@@ -28,10 +28,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         for (i = 0; i < dataFromFetch.length; i++) {
            let categoryName = dataFromFetch[i].name;
+            //  parameter nr 2 definerer value af dataset/href
            createMenu(categoryName, dataFromFetch[i].id);
         }
-
-        
 
         function createMenu(textNode, categoryid){
             let listItemElement = document.createElement("li");
@@ -39,7 +38,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let linkElement = document.createElement("a");
             linkElement.classList.add("category-menu__link");
             linkElement.innerHTML = textNode;
-            linkElement.dataset.categoryid = categoryid;
+            // her sættes href = ?id
+            linkElement.href = "?id=" + categoryid;
             listItemElement.appendChild(linkElement);
             categoryMenuListElement.appendChild(listItemElement);
         }

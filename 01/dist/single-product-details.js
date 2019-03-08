@@ -1,4 +1,5 @@
- 
+
+
 fetch("data/products.json")
 // mellem-then() skal altid skrives på denne/samme måde
 .then((response)=>{
@@ -7,15 +8,20 @@ fetch("data/products.json")
 })
 .then((data)=>{
 
-let URLid = 1;
+// URLparameter,sendt med fra filter.js > filteredProducts.foreach =>.
+
+let URLid = getAllUrlParams().id;
+console.log(URLid);
 let productArray = data;
 const thumbnailListElement = document.querySelector(".single-thumbnails");
 const featuredImage = document.querySelector(".single-image__src");
+const priceElement = document.querySelector(".single-shop-price");
+const valutaSymbol = "$";
 
     productArray.forEach(product => {
         if(URLid == product.id) {
-            setPrice(product.price);
-            setImage(product.image_path);
+            setPrice(priceElement, product.price, valutaSymbol);
+            setImage(featuredImage, product.image_path);
             createThumbnailElements(product.thumbnail_array);
         }
     });
@@ -42,14 +48,12 @@ const featuredImage = document.querySelector(".single-image__src");
         // TODO: Her kunne jeg udskrive hovedbilledet som thumbnail
     }
 
-    function setPrice(price){
-        const priceElement = document.querySelector(".single-shop-price");
-        priceElement.innerHTML = "";
-        priceElement.innerHTML = price;
+    function setPrice(tag, price, valuta){
+        tag.innerHTML = price + valuta;
     }
 
-    function setImage(imageSrc) {
-        featuredImage.src = imageSrc;
+    function setImage(tag, imageSrc) {
+        tag.src = imageSrc;
     }
 
     // denne virker rigtigt når der er 2 billeder. skal have fat i array
@@ -61,13 +65,13 @@ const featuredImage = document.querySelector(".single-image__src");
                 event.preventDefault();
                 // console.log(event);
                 // console.log(thumbnail.src);
-                changeImage(thumbnail.src);
+                changeImageByThumbnail(featuredImage, thumbnail.src);
             }, true);
         });
     }
 
-    function changeImage(imageSrc) {
-        featuredImage.src = imageSrc;
+    function changeImageByThumbnail(tag, imageSrc) {
+        tag.src = imageSrc;
     }
 
 

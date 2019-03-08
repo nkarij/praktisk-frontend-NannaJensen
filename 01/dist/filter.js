@@ -1,23 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-    // LAV ET FILTER, SOM KUN VISER DE FOTOS SOM HØRER TIL CATEGORIES
-    // her skal hentes 2 x fetch, fra hhv. loadallproducts + category.
-    // husk at lave en async timer-betingelse.
-    // on click (category menu item) if (event.target.className == class {
-    //  if data1.category == data2.name >
-    // listitems.innerHtml = "" + vis elementer
-    // her skrives globale variabler
+
+
     let finishedFetching = 0;
     let timerCounts = 0;
+    // VARIABLEN HENTER DATA FRA PRODUCTS.JSON
     let allProducts;
-    let categories;
+    // VARIABLEN HENTER DATA FRA CATEGORIES.JSON
+    let categoryData;
+    // TOMT ARRAY
     let filteredProducts  = [];
+    // her er mine URL-variabler tomme, dvs at jeg sender start-URL med
+    let categoryURLids = "empty";
+    // her tjekker jeg først at min URL ikke er tom, dvs at der er en id-variabel
+    // og så overskriver jeg min categoryURLids med min get parameter funktion.
+    // denne overskrivning sker v tryk på menulink m href (fordi siden reloader)
+    let allURLParameters = getAllUrlParams();
+    if(typeof allURLParameters.id !== "undefined") {
+        categoryURLids = allURLParameters.id;
+    }
+
+    // QUERY VARIABLER
     const allProductsGalleryElement = document.querySelector(".all-products-gallery");
     const categoryMenuList = document.querySelector(".category-menu");
+    const urlStringSingleProductPage = "shop-singleproductview.html?id=";
 
-    // her henter jeg mine fetches.
+    // her henter jeg alle producter.
     fetch("data/products.json")
-    // mellem-then() skal altid skrives på denne/samme måde
+
     .then((response)=>{
         // console.log(response);
         return response.json();
@@ -29,16 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     timerCounts++;
     
-
+    // her henter jeg kategorierne.
     fetch("data/categories.json")
-    // mellem-then() skal altid skrives på denne/samme måde
+   
     .then((response)=>{
         // console.log(response);
         return response.json();
     })
     .then((data)=>{
-        categories = data;
-        // console.log(data2);
+        categoryData = data;
         fetchIsDone();
     });
     timerCounts++;
@@ -50,41 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (finishedFetching == timerCounts) {
             console.log("proceed");
             // her må jeg kalde mine hjælpefunktioner mm...
-            // når categoryName er tomt = må den loope alle producter [dette er min egen regel]
-            filterByCategory("empty");
 
-            // categoryMenuList.addEventListener('click', function(){
-            //     filterByCategory(event.target.innerHTML);
-            // });
-
-            let categoryMenuLinksArray = categoryMenuList.querySelectorAll("a");
-            categoryMenuLinksArray.forEach(link => {
-                console.log(link.dataset.categoryid);
-                link.addEventListener('click', function(){
-                    // console.log("har klikket på et link")
-                    filterByCategory(link.dataset.categoryid);
-                });
-            });
+            // når filterByCategory() parametre er tom = må fun loope alle producter [dette er min egen regel]
+            filterByCategory(categoryURLids);
         }
     }
 
-    function filterByCategory(categoryID){
-        console.log(categoryID);
-        console.log("kører filterByCategory");
-        // console.log(event);
-            // console.log(event.target.innerHTML);
+    function filterByCategory(categoryURL){
+        // console.log(categoryURL);
         filteredProducts = [];
 
-        // genererer nyt array, filtrerer produkterne 
-        categories.forEach((category) => {
-            if(categoryID == "empty" || category.id == categoryID) {
-                console.log("har fundet kategori" + category.name);
-                // loop data1.category
-                allProducts.forEach(item => {
-                    // console.log(item);
-                    if(categoryID == "empty" || item.category == category.id) {
-                        // console.log(item);
-                        filteredProducts.push(item);
+        // genererer nyt array/categoryarray
+        categoryData.forEach((category) => {
+            // "empty" betyder at url er tom og derfor passes alle produkter
+            if(categoryURL == "empty" || category.id == categoryURL) {
+            // looper alle produkter || categoriens produkter
+                allProducts.forEach(singleProduct => {
+                    // console.log(singleProduct);
+                    if(singleProduct.category == category.id) {
+                        // console.log(singleProduct);
+                        filteredProducts.push(singleProduct);
+                        console.log("produkt tilføjet");
                         // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
                     }
                 });
@@ -94,14 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // rydder galleriet for elementer/andet
         allProductsGalleryElement.innerHTML = "";
 
+        console.log(allProductsGalleryElement);
+
         // generer html-elementer vha det nye array (filtered products)
         filteredProducts.forEach(product => {
-            // console.log(product);
             let listItemElement = document.createElement("li");
             listItemElement.classList.add("category-product-item");
             let linkElement = document.createElement("a");
-            linkElement.setAttribute('href', product.image_path);
+            // her sender jeg productID til url...
+            linkElement.setAttribute('href', product.id);
             linkElement.classList.add("category-product-link");
+            // dette skulle sende product id til URLen? den refresher????
+            linkElement.href = urlStringSingleProductPage + product.id;
             let imageElement = document.createElement("img");
             imageElement.classList.add("category-product-image");
             // appending to UL.
@@ -111,9 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
             imageElement.src = product.image_path;
 
         });
-
-        // appendImage();
-        // console.log(filteredProducts);
     }
 
 });
