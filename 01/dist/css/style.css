@@ -17,11 +17,6 @@ html {
 
 /* LINKS
 ------------------------------------*/
-.no-deco {
-  text-decoration: none;
-  color: black;
-}
-
 /* FA FA ICONS
 ------------------------------------*/
 .fas, .far {
@@ -37,7 +32,7 @@ html {
   text-align: center;
 }
 
-/* vertical alignment on child - det er noget med at det skal være before/after pseudo.. */
+/* vertical alignment on child - ved ikoner er der noget med at det skal være before/after pseudo.. */
 .icon-align-v {
   display: inline-block;
   vertical-align: middle;
@@ -103,20 +98,23 @@ h4 {
 }
 
 /*---------------------------------------------------
-    HEADER  
+    FRONTPAGE     
 ----------------------------------------------------*/
+/*
+    HEADER  
+-----------------------------------*/
 .header {
-  background-color: palevioletred;
-  height: 60vh;
+  background: url(../page-photos/subwoofer.jpg);
+  height: 15vh;
 }
 
 .header--collapse {
   height: auto;
 }
 
-/*---------------------------------------------------
+/*
     TOP-BANNER
-----------------------------------------------------*/
+---------------------------------*/
 .top-banner {
   padding: 1%;
 }
@@ -129,18 +127,19 @@ h4 {
   margin: 0;
 }
 
-.top-menu__listitem {
-  margin: 0.5% 1%;
-}
-
 .top-menu__listitem:first-of-type {
   margin: 0.5% 4%;
+}
+
+.top-menu__listitem, .top-menu__listitem--limited-items {
+  margin: 0.5% 1%;
 }
 
 /* NAVIGATION MAIN
 ------------------------------------*/
 .main-nav {
   background-color: black;
+  padding: 2%;
 }
 
 .main-menu {
@@ -156,9 +155,47 @@ h4 {
   display: inline-block;
 }
 
-/*---------------------------------------------------
+.main-menu-item__link {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #ffffff;
+}
+.main-menu-item__link:hover {
+  color: #a29161;
+  background-color: #6172a2;
+  opacity: 0.5;
+}
+
+/*
+    LOGO SECTION
+---------------------------*/
+.logo {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.logo__wrap {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*
     NEWS SECTION
-----------------------------------------------------*/
+---------------------------*/
 .news-banner {
   width: 100%;
   height: auto;
@@ -170,9 +207,9 @@ h4 {
   object-fit: contain;
 }
 
-/*---------------------------------------------------
+/*
     SLIDE SECTION
-----------------------------------------------------*/
+-------------------------------*/
 .slider-container {
   position: relative;
 }
@@ -188,6 +225,12 @@ h4 {
   object-fit: cover;
 }
 
+.slider-arrows {
+  color: #a29161;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .slider-arrows__left {
   position: absolute;
   top: 50%;
@@ -200,71 +243,92 @@ h4 {
   right: 5%;
 }
 
-/*---------------------------------------------------
+/*
     SOME MENU
-----------------------------------------------------*/
+----------------------------------*/
 .some-menu-container {
   display: flex;
-  height: 35vh;
+  flex-direction: column;
   width: 100%;
 }
 
-.some-menu-cards {
-  width: calc(100%/3);
+.some-menu-card {
+  display: block;
+  height: 20vh;
+  width: 100%;
+}
+
+.some-menu__link {
+  display: block;
+  width: 100%;
   height: 100%;
+  background: url("../page-photos/social-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
-.some-menu__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.some-icon__container {
-  display: block;
-  height: 50%;
-  width: 50%;
+.some-icon__image {
+  display: inline-block;
   position: absolute;
-  left: 10%;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 90%;
 }
 
-/*---------------------------------------------------
+/*
     TEASER SECTION
-----------------------------------------------------*/
+--------------------------*/
 .teaser-stories {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: black;
+  width: 100%;
+  padding: 8%;
+}
+
+.teaser-article {
   width: 100%;
 }
 
-.teaser-story {
+.teaser-link {
   display: block;
   text-decoration: none;
   color: #ffffff;
   color: white;
-  width: calc(100%/3);
-  padding: 5% 10%;
 }
-.teaser-story:hover {
-  color: blue;
-  background-color: yellow;
-  opacity: 0.7;
+.teaser-link:hover {
+  color: #a29161;
+  background-color: #6172a2;
+  opacity: 0.5;
 }
 
-/*---------------------------------------------------
+.teaser-heading {
+  font-size: 2.5rem;
+}
+
+.teaser-text {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/*
     FOOTER
 ----------------------------------------------------*/
 .footer {
   display: flex;
   justify-content: space-between;
+  font-size: 1.5rem;
   background-color: #ffc831;
   padding: 1% 3vw;
 }
 
 .half-page {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   color: black;
@@ -276,14 +340,45 @@ h4 {
   justify-content: flex-start;
 }
 
+/*
+    ADRESS
+--------------------------*/
+.adress-info {
+  margin-right: 8px;
+}
+
 .adress-text {
+  color: white;
   margin: 0;
 }
 
-.some-footer-container {
-  display: flex;
+.small-print__links {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
 }
 
+/*
+    SOME FOOTER
+--------------------------*/
+.some-footer-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.some-footer-icons {
+  margin: 0 2%;
+}
+
+.some-footer-icon__container {
+  display: block;
+}
+
+/*
+    PAYMENT FOOTER
+--------------------------*/
 .creditcard-info-link {
   padding: 1%;
 }
@@ -302,17 +397,25 @@ h4 {
 }
 
 .main--medium-wide {
-  width: 60vw;
-  height: 100vh;
-  margin: auto;
+  width: 100%;
 }
 
 .shop-front-gallery {
   display: grid;
-  grid-template-columns: repeat(4, calc(100%/4));
-  grid-template-rows: repeat(4, calc(100%/4));
-  height: 100%;
-  width: 100%;
+  margin: 0 1vw;
+  padding: 0;
+  grid-template-columns: repeat(2, 49vw);
+  grid-template-rows: repeat(2, 49vw);
+}
+
+.shop-front-card {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.shop-front-card__links {
+  display: block;
 }
 
 .shop-front-card__image {
@@ -322,7 +425,13 @@ h4 {
 }
 
 .shop-front-card__text {
-  display: none;
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 /*---------------------------------------------------

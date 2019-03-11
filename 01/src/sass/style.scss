@@ -41,8 +41,13 @@ h4 {
 -----------------------------------*/
 
 .header {
-    background-color: palevioletred;
-    height: 60vh;
+    background: url(../page-photos/subwoofer.jpg);
+    height: 15vh;
+    // @mixin mediaQuery($args) {
+    //     @media (min-width: $args) {
+    //         height: 60vh;
+    //     }
+    //   }
 }
 
 .header--collapse {
@@ -66,18 +71,21 @@ h4 {
     @include list-undecorate();
 }
 
-.top-menu__listitem {
-    margin: .5% 1%;
-}
-
 .top-menu__listitem:first-of-type {
     margin: .5% 4%;
 }
+
+.top-menu__listitem, .top-menu__listitem--limited-items {
+    margin: .5% 1%;
+}
+
+
 
 /* NAVIGATION MAIN
 ------------------------------------*/
 .main-nav {
     background-color: black;
+    padding: 2%;
 }
 
 .main-menu {
@@ -89,6 +97,37 @@ h4 {
 .main-menu-item {
     margin: .5% 1%;
     display: inline-block;
+}
+
+.main-menu-item__link {
+    @include fill-parent();
+    @include link-decoration();
+}
+
+
+/*
+    LOGO SECTION
+---------------------------*/
+
+.logo {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.logo__wrap {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo__image {
+    @include fit-image(contain);
 }
 
 
@@ -122,6 +161,12 @@ h4 {
     @include fit-image(cover);
 }
 
+.slider-arrows {
+    color: $theme-details;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .slider-arrows__left {
     position: absolute;
     top: 50%;
@@ -140,27 +185,45 @@ h4 {
 
 .some-menu-container {
     display: flex;
-    height: 35vh;
+    flex-direction: column;
     width: 100%;
 }
 
-.some-menu-cards {
-    width: calc(100%/3);
-    height: 100%;
-    position: relative;
-}
-
-.some-menu__image {
-    @include fit-image(cover);
-}
-
-.some-icon__container {
+.some-menu-card {
     display: block;
-    height: 50%;
-    width: 50%;
+    height: 20vh;
+    width: 100%;
+    // @mixin mediaQuery($args) {
+    //     @media (min-width: $args) {
+    //         width: calc(100%/3);
+    //         height: 50vh;
+    //     }
+    //   }
+}
+
+.some-menu__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../page-photos/social-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+}   
+
+.some-icon__image {
+    display: inline-block;
     position: absolute;
-    left: 10%;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 90%;
+    // @mixin mediaQuery($args) {
+    //     @media (min-width: $args) {
+    //       @content;
+    //     }
+    // }
 }
 
 /*
@@ -168,16 +231,42 @@ h4 {
 --------------------------*/
 .teaser-stories {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: black;
     width: 100%;
+    padding: 8%;
+    @mixin mediaQuery($args) {
+        @media (min-width: $args) {
+            flex-direction: row;
+            padding: 5%;
+        }
+    }
 }
 
-.teaser-story {
+.teaser-article {
+    width: 100%;
+    @mixin mediaQuery($args) {
+        @media (min-width: $args) {
+            width: calc(100%/3);
+        }
+    }
+}
+
+.teaser-link {
     display: block;
     @include link-decoration();
     color: white;
-    width: calc(100%/3);
-    padding: 5% 10%;
+}
+
+.teaser-heading {
+    font-size: 2.5rem;
+    
+}
+
+.teaser-text {
+    font-size: 2rem;
+    margin: 0.5rem 0;
 }
 
 /*
@@ -187,12 +276,14 @@ h4 {
 .footer {
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
     background-color: rgb(255, 200, 49);
     padding: 1% 3vw;
 }
 
 .half-page {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     color: black;
@@ -204,13 +295,49 @@ h4 {
     justify-content: flex-start;
 }
 
+/*
+    ADRESS
+--------------------------*/
+
+.adress-info {
+    margin-right: 8px;
+}
+
 .adress-text {
+    color: white;
     margin: 0;
 }
 
+.small-print__links {
+    display: inline-block;
+    color: white;
+    @include no-deco();
+}
+
+/*
+    SOME FOOTER
+--------------------------*/
+
 .some-footer-container {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 100%;
 }
+
+.some-footer-icons {
+    margin: 0 2%;    
+}
+
+.some-footer-icon__container {
+    display: block;
+}
+
+
+
+/*
+    PAYMENT FOOTER
+--------------------------*/
 
 .creditcard-info-link {
     padding: 1%;
@@ -220,6 +347,8 @@ h4 {
     @include fit-image(contain);
 }
 
+
+
 /*---------------------------------------------------
     SHOP FRONTPAGE GALLERY
 ----------------------------------------------------*/
@@ -228,37 +357,58 @@ h4 {
     background-color: black;
 }
 
+
 .main--medium-wide {
-    width: 60vw;
-    height: 100vh;
-    margin: auto;
+    // height: 100vh;
+    width: 100%;
+    @mixin mediaQuery($args) {
+        @media (min-width: $args) {
+          width: 60vw;
+          margin: auto;
+        }
+    }
 }
 
 .shop-front-gallery {
     display: grid;
-    grid-template-columns: repeat(4, calc(100%/4));
-    grid-template-rows: repeat(4, calc(100%/4));
-    height: 100%;
-    width: 100%;
+    margin: 0 1vw;
+    padding: 0;
+    grid-template-columns: repeat(2, 49vw);
+    grid-template-rows: repeat(2, 49vw);
+    // border: solid 2px yellow;
+    // @mixin mediaQuery($args) {
+    //     @media (min-width: $args) {
+    //         grid-template-columns: repeat(4, calc(100%/4));
+    //         grid-template-rows: repeat(4, calc(100%/4));
+    //     }
+    // }
 }
 
-// .shop-front-card {
-//     // position: relative;
+.shop-front-card {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
 
-// }
-
-// .shop-front-card__links {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-// }
+.shop-front-card__links {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+}
 
 .shop-front-card__image {
     @include fit-image(cover);
 }
 
 .shop-front-card__text {
-    display: none;
+    // display: none;
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 /*---------------------------------------------------

@@ -12,35 +12,35 @@
     <header class="header">
         <div class="top-banner">
             <ul class="top-menu">
-                <li class="top-menu__listitem">
+                <!-- <li class="top-menu__listitem">
                     <input class="searchbar-input" type="search" name="searhbar-input" id="searhbar-input">
                     <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon fas fa-search"></i>
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li> -->
+                <li class="top-menu__listitem--limited-items">
+                    <a href="" class="user-icon-link">
+                        <i class="user-icon fas fa-user"></i>
+                    </a>
+                </li>
+                <!-- <li class="top-menu__listitem">
+                    <a href="" class="cart-icon-link">
+                        <i class="cart-icon fas fa-cart-plus"></i>
+                    </a>
+                </li> -->
+                <li class="top-menu__listitem">
+                    <a href="" class="map-icon-link">
+                        <i class="map-icon fas fa-map-marker-alt"></i>
                     </a>
                 </li>
                 <li class="top-menu__listitem">
-                    <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon fas fa-user"></i>
+                    <a href="" class="phone-icon-link">
+                        <i class="phone-icon fas fa-phone"></i>
                     </a>
                 </li>
                 <li class="top-menu__listitem">
-                    <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon fas fa-cart-plus"></i>
-                    </a>
-                </li>
-                <li class="top-menu__listitem">
-                    <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon fas fa-map-marker-alt"></i>
-                    </a>
-                </li>
-                <li class="top-menu__listitem">
-                    <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon fas fa-phone"></i>
-                    </a>
-                </li>
-                <li class="top-menu__listitem">
-                    <a href="" class="searchbar-button">
-                        <i class="searchbar-button__icon far fa-envelope"></i>
+                    <a href="" class="envelope-icon-link">
+                        <i class="envelope-icon far fa-envelope"></i>
                     </a>
                 </li>
             </ul>
@@ -56,6 +56,11 @@
                 <li class="main-menu-item"><a href="" class="main-menu-item__link">CONTACT US</a></li>
             </ul>
         </nav>
+        <div class="logo">
+            <figure class="logo__wrap">
+                <img class="logo__image" src="page-photos/logo.png" alt="logo">
+            </figure>
+        </div>
     </header>
     <!-- MAIN -->
     <main class="main">
@@ -65,8 +70,8 @@
         </div>
         <!-- FEATURED PRODUCT SLIDER -->
         <div class="slider-container">
-            <span class="slider-arrows slider-arrows__left"> <= </span>
-            <span class="slider-arrows slider-arrows__right"> => </span>
+            <span class="slider-arrows slider-arrows__left">&lang;</span>
+            <span class="slider-arrows slider-arrows__right">&rang;</span>
             <div class="slide">
                 <img src="page-photos/slide-3.jpg" alt="slide-image" class="slide__image">
             </div>
@@ -74,40 +79,43 @@
 
         <!-- SOME MENU -->
         <ul class="some-menu-container">
-            <li class="some-menu-cards">
-                <img src="page-photos/social-1.jpg" alt="" class="some-menu__image">
-                <a href="" class="some-icon__container">
+            <li class="some-menu-card">
+                <a class="some-menu__link">
                     <img src="page-photos/facebook-large.png" alt="" class="some-icon__image">
                 </a>
             </li>
-            <li class="some-menu-cards">
-                <img src="page-photos/social-2.jpg" alt="" class="some-menu__image">
-                <a href="" class="some-icon__container">
-                    <img src="page-photos/twitter-large.png" alt="" class="some-icon__image">
+            <li class="some-menu-card">
+                <a class="some-menu__link">
+                    <img src="page-photos/blog-large.png" alt="" class="some-icon__image">
                 </a>
             </li>
-            <li class="some-menu-cards">
-                <img src="page-photos/social-3.jpg" alt="" class="some-menu__image">
-                    <a href="" class="some-icon__container">
-                        <img src="page-photos/blog-large.png" alt="" class="some-icon__image">
-                    </a>
+            <li class="some-menu-card">
+                <a class="some-menu__link">
+                    <img src="page-photos/twitter-large.png" alt="" class="some-icon__image">
+                </a>
             </li>
         </ul>
 
         <!-- TEASER SECTION -->
         <section class="teaser-stories">
-            <a href="#" class="teaser-story">
-                <h4 class="teaser-heading">HEADING</h4>
-                <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
-            </a>
-            <a href="#" class="teaser-story">
-                <h4 class="teaser-heading">HEADING</h4>
-                <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
-            </a>
-            <a href="#" class="teaser-story">
-                <h4 class="teaser-heading">HEADING</h4>
-                <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
-            </a>
+            <article class="teaser-article">
+                <a href="#" class="teaser-link">
+                    <h4 class="teaser-heading">HEADING</h4>
+                    <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
+                </a>
+            </article>
+            <article class="teaser-article">
+                <a href="#" class="teaser-link">
+                    <h4 class="teaser-heading">HEADING</h4>
+                    <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
+                </a>
+            </article>
+            <article class="teaser-article">
+                <a href="#" class="teaser-link">
+                    <h4 class="teaser-heading">HEADING</h4>
+                    <p class="teaser-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum eos error blanditiis.</p>
+                </a>
+            </article>
         </section>
 
         <!-- FOOTER -->
@@ -119,7 +127,7 @@
                     <p class="adress-text"> adresse </p>
                 </addres>
                 <section class="small-print">
-                    <a href="#" class="small-print__links">returns</a>
+                    <a href="#" class="small-print__links">returns | </a>
                     <a href="#" class="small-print__links">privacy</a>
                 </section>
             </section>
