@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(typeof allURLParameters.id !== "undefined") {
         categoryURLids = allURLParameters.id;
     }
+    let valutaType = " $"
 
     // QUERY VARIABLER
     const allProductsGalleryElement = document.querySelector(".all-products-gallery");
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(singleProduct.category == category.id) {
                         // console.log(singleProduct);
                         filteredProducts.push(singleProduct);
-                        console.log("produkt tilføjet");
+                        // console.log("produkt tilføjet");
                         // her kan jeg evt sende item.image_path osv med i en createBlaBlaBla.
                     }
                 });
@@ -88,27 +89,53 @@ document.addEventListener('DOMContentLoaded', () => {
         // rydder galleriet for elementer/andet
         allProductsGalleryElement.innerHTML = "";
 
-        console.log(allProductsGalleryElement);
+        // console.log(allProductsGalleryElement);
 
         // generer html-elementer vha det nye array (filtered products)
         filteredProducts.forEach(product => {
+            let productItem = product;
             let listItemElement = document.createElement("li");
-            listItemElement.classList.add("category-product-item");
+            listItemElement.classList.add("category-product");
             let linkElement = document.createElement("a");
             // her sender jeg productID til url...
             linkElement.setAttribute('href', product.id);
-            linkElement.classList.add("category-product-link");
+            linkElement.classList.add("category-product__link");
             // dette skulle sende product id til URLen? den refresher????
             linkElement.href = urlStringSingleProductPage + product.id;
             let imageElement = document.createElement("img");
-            imageElement.classList.add("category-product-image");
+            imageElement.classList.add("category-product__image");
+            imageElement.src = product.image_path;
             // appending to UL.
             linkElement.appendChild(imageElement);
             listItemElement.appendChild(linkElement);
             allProductsGalleryElement.appendChild(listItemElement);
-            imageElement.src = product.image_path;
-
+            // her kaldes funktioner som indsætter navn + pris + button.
+            setAllProductsName(productItem, listItemElement);
+            setAllProductsPrice(productItem, listItemElement);
+            addToCartButton(listItemElement);
         });
+
+        function setAllProductsName(productItem, listItemElement){
+            let productNameElement = document.createElement("p");
+            productNameElement.classList.add("category-product__name");
+            productNameElement.innerHTML = productItem.name;
+            listItemElement.insertAdjacentElement('beforeend', productNameElement);
+        }
+
+        function setAllProductsPrice(productItem, listItemElement) {
+            let productPriceElement = document.createElement("span");
+            productPriceElement.classList.add("category-product__price");
+            productPriceElement.innerHTML = productItem.price + valutaType;
+            listItemElement.insertAdjacentElement('beforeend', productPriceElement);
+        }
+
+        function addToCartButton(listItemElement) {
+            let toCartButtonElement = document.createElement("button");
+            toCartButtonElement.classList.add("category-product__button");
+            toCartButtonElement.innerHTML = "Add To Cart";
+            listItemElement.insertAdjacentElement('beforeend', toCartButtonElement);
+        }
+
     }
 
 });

@@ -8,9 +8,11 @@ html {
 
 @mixin font-align-basic($text-align, $margin){
     text-align: $text-align;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     margin: $margin;
 }
+
+
 
 
 /* LINKS
@@ -33,9 +35,9 @@ html {
 /* FA FA ICONS
 ------------------------------------*/
 
-.fas, .far {
-    color: black;
-}
+// .fas, .far {
+//     color: black;
+// }
 
 /* horisontal alignment on parent */
 

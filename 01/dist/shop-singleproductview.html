@@ -10,7 +10,7 @@
 </head>
 <body class="body">
     <!-- HEADER -->
-    <header class="header header--collapse">
+    <header class="header--collapse">
         <div class="top-banner">
             <ul class="top-menu">
                 <li class="top-menu__listitem">
@@ -64,10 +64,10 @@
         <!-- BREADCRUMB MENU -->
         <ul class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="#" class="breadcrumb-item__link">link</a>
+                <a href="#" class="breadcrumb-item__link">link |</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="#" class="breadcrumb-item__link">link</a>
+                <a href="#" class="breadcrumb-item__link">| link</a>
             </li>
         </ul>
 
@@ -86,31 +86,32 @@
                 <div class="single-shopgrid">
 
                     <!-- GRID COLUMN 1 -->
-                    <!-- product image section -->
-                    <div class="single-image-box">
-                        <div class="single-image__zoom">
-                            <div class="single-image__gallery">
-                                <img src="page-photos/single-page-products/product-front.png" alt="" class="single-image__src">
+                    <div class="inspect-product-section">
+                        <!-- product image section -->
+                        <div class="single-image-box">
+                            <div class="single-image__zoom">
+                                <div class="single-image__gallery">
+                                    <img src="page-photos/single-page-products/product-front.png" alt="" class="single-image__src">
+                                </div>
                             </div>
                         </div>
+                        <!-- thumbnail section -->
+                        <div class="single-more-views">
+                            <h4 class="single-more-views__heading">MORE VIEWS</h4>
+                            <ul class="single-thumbnails">
+                                <!-- <li class="single-thumbnails__item">
+                                    <a href="" class="single-thumbnails__link">
+                                        <img src="page-photos/single-page-products/product-black.png" alt="" class="single-thumbnail__image">
+                                    </a>
+                                </li>
+                                <li class="single-thumbnails__item">
+                                    <a href="" class="single-thumbnails__link">
+                                        <img src="page-photos/single-page-products/product-back.png" alt="" class="single-thumbnail__image">
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
-                    <!-- thumbnail section -->
-                    <div class="single-more-views">
-                        <h4 class="single-more-views__heading">MORE VIEWS</h4>
-                        <ul class="single-thumbnails">
-                            <!-- <li class="single-thumbnails__item">
-                                <a href="" class="single-thumbnails__link">
-                                    <img src="page-photos/single-page-products/product-black.png" alt="" class="single-thumbnail__image">
-                                </a>
-                            </li>
-                            <li class="single-thumbnails__item">
-                                <a href="" class="single-thumbnails__link">
-                                    <img src="page-photos/single-page-products/product-back.png" alt="" class="single-thumbnail__image">
-                                </a>
-                            </li> -->
-                        </ul>
-                    </div>
-
                     <!-- DESCRIPTION section -->
                     <!-- type description -->
                     <section class="single-info-section">
@@ -162,7 +163,7 @@
                     <div class="single-shop-box">
                         <!-- shop text -->
                         <section class="single-shop">
-                            <h4 class="single-shop__heading"></h4>
+                            <h4 class="single-shop__heading">OVERSKRIFT</h4>
                             <div class="single-shop-sublines">
                                 <a href="" class="single-shop-view-more-products">VIEW MORE PRODUCTS</a>
                                 <span class="single-shop-price"> <span class="single-shop-valuta">$</span> </span>
@@ -195,15 +196,15 @@
                         <!-- quantity -->
                         <div class="to-cart-box">
                             <div class="to-cart-quantity-box">
-                                <label for="to-cart-quantity" class="to-cart-quantity-label"></label>
-                                <input type="number" class="to-cart-quantity">  
+                                <label for="to-cart-quantity" class="to-cart-quantity-label">Qty:</label>
+                                <input type="number" value="1"  class="to-cart-quantity">  
                             </div>
                             <!-- buttons -->
                             <div class="to-cart-button-box">
                                 <button class="to-cart-button">ADD TO CART</button>
-                                <p class="to-cart-text"> OR </p>
-                                <a href="" class="to-cart-paypal">
-                                    <img src="" alt="" class="to-cart-paypal__image">
+                                <p class="to-cart-text"> -OR- </p>
+                                <a href="" class="to-cart-paypal-link">
+                                    <img src="page-photos/paypal-button.png" alt="" class="to-cart-paypal-image">
                                 </a>
                             </div>
                         </div> <!-- quantity section ends -->
@@ -211,9 +212,7 @@
 
                     <!-- ADDITIONAL INFO TABLE -->
                     <section class="single-additional-section">
-                        <h4 class="single-additional-section__heading">DESCRIPTION</h4>
-                        <section class="single-additional">
-                            <p class="single-additional__subline">TYPE</p>
+                            <h4 class="single-additional__subline">TYPE</h4>
                             <ul class="single-additional__list">
                                 <!-- list item -->
                                 <li class="single-additional__listitem">
@@ -231,7 +230,6 @@
                                     <span class="single-info__span">tekst</span>
                                 </li>
                             </ul>
-                        </section>
                     </section> <!-- additional ends -->
 
                 </div> <!-- single-shopgrid ends -->
@@ -288,10 +286,11 @@
     </footer>
     <!-- <script src="image-flip.js"></script> -->
     <script src="functions.js"></script>
+    <!-- <script src="filter.js"></script> -->
     <script src="single-product-details.js"></script>
     <!-- <script src="categories.js"></script>
     <script src="producers.js"></script> -->
     <!-- <script src="loadallproducts.js"></script> -->
-    <!-- <script src="filter.js"></script> -->
+    
 </body>
 </html>

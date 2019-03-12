@@ -19,10 +19,6 @@ html {
 ------------------------------------*/
 /* FA FA ICONS
 ------------------------------------*/
-.fas, .far {
-  color: black;
-}
-
 /* horisontal alignment on parent */
 .icon-parent {
   display: block;
@@ -53,7 +49,7 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
   text-align: left;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   margin: 0;
 }
 
@@ -70,7 +66,8 @@ ul {
 ------------------------------------*/
 .single-shop-cta-button {
   width: calc(100%/5);
-  height: 3vh;
+  height: 5vh;
+  color: white;
   background-color: #a29161;
   border: 1px solid grey;
 }
@@ -93,8 +90,13 @@ h4 {
   margin: 1rem 0;
 }
 
-.breadcrumb-item {
-  margin-right: 0.5rem;
+.breadcrumb-item__link {
+  color: #a29161;
+  text-decoration: none;
+}
+
+.breadcrumb-item__link:active {
+  color: black;
 }
 
 /*---------------------------------------------------
@@ -110,6 +112,7 @@ h4 {
 
 .header--collapse {
   height: auto;
+  background-color: black;
 }
 
 /*
@@ -133,6 +136,28 @@ h4 {
 
 .top-menu__listitem, .top-menu__listitem--limited-items {
   margin: 0.5% 1%;
+}
+
+.fas {
+  color: white;
+}
+
+.searchbar-input {
+  display: inline-block;
+  /*needs to be a block/inline-block element */
+  height: 1.3rem;
+  line-height: 1.3rem;
+  /*needs to be same line-height as height */
+}
+
+.top-menu__listitem:first-child {
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.searchbar-button__icon {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* NAVIGATION MAIN
@@ -306,7 +331,7 @@ h4 {
   opacity: 0.5;
 }
 
-.teaser-heading {
+.teaser-shop-menu-heading {
   font-size: 2.5rem;
 }
 
@@ -321,7 +346,7 @@ h4 {
 .footer {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #ffc831;
   padding: 1% 3vw;
 }
@@ -332,8 +357,12 @@ h4 {
   justify-content: flex-end;
   align-items: center;
   color: black;
-  height: 10vh;
   width: 50%;
+}
+@media (min-width: 600px) and (min-width: 600px) {
+  .half-page {
+    flex-wrap: nowrap;
+  }
 }
 
 .half-page:first-of-type {
@@ -438,15 +467,15 @@ h4 {
     SHOP CATEGORY SITE
 ----------------------------------------------------*/
 .category-page-wrapper {
-  padding: 2% 2%;
+  padding: 0 10px;
 }
 
 /*    page grid
 ---------------------------------------*/
 .category-product-grid {
   display: grid;
-  grid-template-columns: 3fr 6fr 2fr;
-  grid-gap: 5px;
+  grid-template-columns: 1.5fr 60vw 1.3fr;
+  grid-gap: 8px;
 }
 
 /*    breadcrumb
@@ -456,8 +485,14 @@ h4 {
 .filter-topbar {
   display: flex;
   justify-content: space-between;
+  height: 5vh;
   background-color: grey;
   padding: 2% 1%;
+}
+@media (min-width: 600px) and (min-width: 600px) {
+  .filter-topbar {
+    height: 7vh;
+  }
 }
 
 .topbar-half {
@@ -473,16 +508,27 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5%;
+  margin-right: 0.5rem;
+}
+
+.topbar-section:last-of-type {
+  margin-right: 0;
 }
 
 .topbar-text {
   font-size: 0.8rem;
+  margin-right: 0.3rem;
 }
 
 .product-gridview__icon-wrap {
-  height: 15px;
-  width: 15px;
+  height: calc(5vh / 2);
+  width: calc(5vh / 2);
+}
+@media (min-width: 600px) and (min-width: 600px) {
+  .product-gridview__icon-wrap {
+    height: calc(7vh / 2);
+    width: calc(7vh / 2);
+  }
 }
 
 .product-gridview__icon {
@@ -491,24 +537,113 @@ h4 {
   object-fit: cover;
 }
 
+/*    PRODUCT GRID
+---------------------------------------*/
+.all-products-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, calc(60vw / 4));
+  grid-auto-rows: max-content;
+  grid-gap: 2px;
+}
+
+.category-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.category-product__link {
+  display: block;
+  width: 100%;
+  height: 40%;
+}
+
+.category-product__image {
+  width: 100%;
+  height: 100%;
+  object-fit: default;
+}
+
+.category-product__name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.category-product__price {
+  margin-bottom: 1rem;
+  color: #a29161;
+}
+
+.category-product__button {
+  text-transform: uppercase;
+  color: white;
+  background-color: #a29161;
+  border: 1px solid #a29161;
+  padding: 3% 7%;
+}
+
 /*    CATEGORY & PRODUCER MENU
 ---------------------------------------*/
+.category-nav {
+  background-color: lightgrey;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
 .category-menu__item, .producer-menu__item {
   width: 100%;
 }
 
-.category-menu__link, .producer-menu__link {
+.category-menu__link, .producer-menu__link, .producer-menu-expand {
   display: block;
-  color: red;
+  color: #a29161;
   width: 100%;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.producer-menu__link {
+  color: black;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
 }
 
 .category-menu__link:hover, .producer-menu__link:hover {
   background-color: bisque;
 }
 
-/*    PRODUCER MENU
+.shop-menu-shop-menu-heading, .category-menu-shop-menu-heading {
+  text-transform: uppercase;
+  color: #a29161;
+}
+
+.category-menu-shop-menu-heading {
+  color: black;
+}
+
+/*    FILTER MENU
 ---------------------------------------*/
+.filter-nav {
+  background: lightgray;
+  padding: 1rem;
+}
+
+.filter-menu__item:first-of-type {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.filter-menu__shop-menu-heading {
+  padding: 0;
+}
+
+.filter-menu__link {
+  color: #a29161;
+  text-decoration: none;
+}
+
 /*---------------------------------------------------
     SINGLE PRODUCT PAGE
 ----------------------------------------------------*/
@@ -521,7 +656,34 @@ h4 {
 .single-shopgrid {
   display: grid;
   grid-template-columns: 100%;
-  grid-auto-rows: min-content;
+}
+@media (min-width: 600px) and (min-width: 600px) {
+  .single-shopgrid {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.inspect-product-section {
+  order: 1;
+}
+
+.single-info-section {
+  order: 3;
+}
+
+.single-shop-box {
+  margin-top: 2rem;
+  order: 2;
+}
+
+.add-to-cart-wrapper {
+  order: 4;
+}
+
+.single-additional-section {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  order: 5;
 }
 
 /*    BANNER
@@ -579,10 +741,9 @@ h4 {
 ---------------------------------------*/
 /*    SHOP PRODUCT SECTION 
 ---------------------------------------*/
-.single-shop-price, .single-shop-valuta, .single-shop-view-more-products {
-  font-size: 2rem;
-  color: #a29161;
-  text-decoration: none;
+.single-shop__shop-menu-heading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .single-shop-sublines {
@@ -590,11 +751,105 @@ h4 {
   justify-content: space-between;
 }
 
+.single-shop-price, .single-shop-valuta, .single-shop-view-more-products {
+  font-size: 0.8rem;
+  color: #a29161;
+  text-decoration: none;
+}
+
 /*    INTERACT/BUTTON SECTION
 ---------------------------------------*/
 .single-shop-interact {
   display: flex;
   justify-content: space-between;
+}
+
+/*    CUSTOMIZE PRODUCT SECTION
+---------------------------------------*/
+.cart-costumize {
+  width: 50%;
+  background-color: lightgrey;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+/*  TO CART SECTION
+---------------------------------------*/
+.to-cart-box {
+  display: flex;
+  background-color: lightgrey;
+  padding: 1rem;
+}
+
+.to-cart-quantity-label {
+  color: #a29161;
+}
+
+.to-cart-quantity {
+  width: 20px;
+  height: 20px;
+  padding: 0 0.2rem;
+}
+
+.to-cart-button-box {
+  padding: 0 0.2rem;
+}
+
+.to-cart-button {
+  color: white;
+  background-color: #a29161;
+  border: 1px solid #a29161;
+  padding: 2% 4%;
+  text-transform: uppercase;
+}
+
+.to-cart-text {
+  color: #a29161;
+  padding: 0.5rem 1.5rem;
+  margin: 0;
+}
+
+.to-cart-paypal-link {
+  display: block;
+  width: 30%;
+  height: 20%;
+}
+
+.to-cart-paypal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  text-align: left;
+}
+
+/*  ADDITIONAL INFO SECTION
+---------------------------------------*/
+.single-additional__listitem {
+  display: flex;
+  border: 1px solid #a0a0a0;
+}
+
+.single-info__span, .single-additional__span {
+  padding: 0.2rem;
+}
+
+.single-additional__span {
+  width: 30%;
+  background-color: lightgrey;
+}
+
+/*  DESCRIPTION SECTION
+---------------------------------------*/
+.single-info {
+  margin-bottom: 1rem;
+}
+
+.single-info__listitem {
+  display: flex;
+}
+
+.single-info__span:first-child {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
