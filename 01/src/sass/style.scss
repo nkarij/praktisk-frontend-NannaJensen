@@ -11,9 +11,9 @@
 /*---------------------------------------------------
     GLOBAL 
 ----------------------------------------------------*/
-
+ 
 .body {
-    background-color: black;
+    background-color: white;
 }
 
 // brownish text-color
@@ -986,3 +986,25 @@ h4 {
 }
 
 
+/*---------------------------------------------------
+    SEARCH RESULTS PAGE
+----------------------------------------------------*/
+
+.body--searchresults {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+.main--searchresults {
+    height: 100vh;
+}
+
+.searchresult-list {
+    margin: 4rem;
+}
+
+.searchresult__textcontent {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
