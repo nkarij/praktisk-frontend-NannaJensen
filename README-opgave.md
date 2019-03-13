@@ -26,6 +26,7 @@ Produktet skal designes efter mobile first princippet, men nødvendigvis ikke im
 * Layout: Udarbejdelse af teknisk designanalyse.
 * Design datastrukturer i JSON.
 * GODKENDELSE AF OVENSTÅENDE inden der kodes videre.
+
 * Opsæt HTML sider med navigation og dummy-data (statisk site)
 * Opret datafiler (JSON)
 * Programmér funktioner til dataudtræk

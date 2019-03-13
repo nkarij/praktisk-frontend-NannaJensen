@@ -8,17 +8,18 @@ html {
 
 @mixin font-align-basic($text-align, $margin){
     text-align: $text-align;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     margin: $margin;
 }
+
+
 
 
 /* LINKS
 ------------------------------------*/
 
-.no-deco { 
+@mixin no-deco { 
     text-decoration: none;
-    color: black;
 }
 
 @mixin link-decoration(){
@@ -27,12 +28,16 @@ html {
     &:hover{
         color: $link-hover-color;
         background-color: complement($link-hover-color);
-        opacity: .7;
+        opacity: .5;
     }
 }
 
 /* FA FA ICONS
 ------------------------------------*/
+
+// .fas, .far {
+//     color: black;
+// }
 
 /* horisontal alignment on parent */
 
@@ -42,7 +47,7 @@ html {
     text-align: center;
 }
 
-/* vertical alignment on child */
+/* vertical alignment on child - ved ikoner er der noget med at det skal være before/after pseudo.. */
 .icon-align-v {
     display: inline-block;
     vertical-align: middle; 
