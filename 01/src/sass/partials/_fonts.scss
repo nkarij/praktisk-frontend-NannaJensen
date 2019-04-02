@@ -21,15 +21,6 @@ html {
     color: black;
 }
 
-@mixin link-decoration(){
-    text-decoration: none;
-    color: $link-font-color;
-    &:hover{
-        color: $link-hover-color;
-        background-color: complement($link-hover-color);
-        opacity: .7;
-    }
-}
 
 /* FA FA ICONS
 ------------------------------------*/
