@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const producerMenuListElement = document.querySelector(".producer-menu");
     const expandMenuButton = document.querySelector(".producer-menu-expand");
 
+    // hent alle producers
     fetch("data/producers.json")
     // mellem-then() skal altid skrives på denne/samme måde
     .then((response)=>{

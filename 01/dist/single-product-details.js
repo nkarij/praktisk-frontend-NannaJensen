@@ -1,5 +1,4 @@
 
-
 fetch("data/products.json")
 // mellem-then() skal altid skrives på denne/samme måde
 .then((response)=>{
